@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICDCS 2025 International Workshop on EdgeAI</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f7fb;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+    
+        header {
+            background: linear-gradient(135deg, hsl(269, 85%, 43%), #2575FC);
+            color: #fff;
+            text-align: center;
+            padding: 50px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3.0 em;
+            font-weight: 700;
+            animation: slideInDown 1.5s ease-in-out;
+        }
+        header p {
+            font-size: 1.2em;
+            margin: 10px 0 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        header img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            animation: zoomIn 2s ease-in-out;
+        }
+
+       
+        nav {
+            background: #333;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+            position: relative;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        nav a:hover {
+            color: #6A11CB;
+            transform: scale(1.1);
+        }
+
+    
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        h2 {
+            color: #2575FC;
+            font-weight: 700;
+            border-bottom: 3px solid #6A11CB;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            position: relative;
+            animation: slideInLeft 1.5s ease-in-out;
+        }
+        p, ul {
+            line-height: 1.6;
+        }
+        ul {
+            list-style: disc;
+            margin-left: 20px;
+        }
+
+    
+        @keyframes slideInDown {
+            0% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes zoomIn {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        @keyframes slideInLeft {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+    
+        .profile-card {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #eef2f9;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .profile-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .profile-card img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+        .profile-card div {
+            flex: 1;
+        }
+        .profile-card h3 {
+            margin: 0 0 10px;
+            color: #2575FC;
+        }
+        .profile-card p {
+            margin: 0;
+            color: #555;
+        }
+
+    
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9em;
+        }
+        footer a {
+            color: #6A11CB;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>1st International Workshop on Federated Learning for Wireless Edge Artificial Intelligence (FedEdgeAI)</h1>
+        <p> In conjunction with the <a href="https://icdcs2025.icdcs.org/" style="color:whitesmoke;" target="_blank">45th IEEE International Conference on Distributed Computing Systems (IEEE ICDCS 2025)</a> </p>
+        <br>
+        <p>20 July - 23 July, 2025, Glasgow, Scotland, UK</p>
+
+
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#topics">Call for papers</a>
+        <a href="#important-dates">Important Dates</a>
+        <a href="#submission">Submission Guidelines</a>
+
+        <a href="#committee">Committee</a>
+        <a href="#keynote-speakers">Keynote Speakers</a>
+
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        <section id="about">
+            <h2>About the Workshop</h2>
+            <p>
+                Welcome to the 1st workshop on federated learning for Wireless Edge AI (FedEdgeAI). <strong>FedEdgeAI</strong> will be hosted in conjunction with the <a href="https://icdcs2025.icdcs.org/" target="_blank">IEEE ICDCS 2025</a>
+                conference, which will be held in Glasgow, Scotland, United Kingdom, from July 20th to July 23rd, 2025. 
+                <p>We invite you to submit your original work on topics related to federated learning, focusing on real-world challenges when federated learning is deployed in practical scenarios. This includes algorithms for distributed machine learning, adaptive techniques for changing network conditions, edge AI resilience, benchmarking generative models at the edge, downsizing Large Language Models (LLMs) into Small Language Models (SLMs)
+                    for improved computation and communication efficiency, semantic communication, asynchronous federated learning training, and rethinking communication protocols for wireless federated learning.</p>
+            </section>
+        <section id="topics">
+            <h2>Call for Papers</h2>
+           
+            <p>
+                Edge AI emerged as an evolution of the edge computing paradigm, deploying AI algorithms and models directly on edge devices. Within this context, the concept of federated learning provides privacy by design in an machine learning technique, enabling collaborative learning across multiple distributed devices without sending raw data to a central server while processing data locally on devices. However, given the limited availability of resources on many devices, performing federated learning on such devices is impractical due to increased training times. Moreover, for training machine learning models that may be a Deep Neural Network (DNN), massive amounts of parameter updates need to be synchronized across distributed devices, creating potential congestion and eventually slowdowns the entire training process. </p>
+                
+                <p>    Specifically, the end devices used in federated learning are predominantly wireless and typically operate with limited bandwidth, such as 2G, 3G, or Wi-Fi. The global and local model parameters use uplink and downlink transmission, which depend on bandwidth resource block allocation, fading, and interference from others. Exchanging model parameters over such lossy networks may result in challenges such as transmission delay, which impacts the convergence time of the model, and packet losses, which affect the model’s accuracy.</p>
+            <p>
+                We invite submissions on a wide range of topics including, but not limited to:
+            </p>
+            <ul>
+                <li>Novel algorithms and architectures for the intersection of distributed machine learning and the cloud-edge-device continuum.</li>
+                <li>Adaptive techniques for real-world constraints in federated learning deployments.</li>
+                <li>Techniques for downsizing LLMs to SLMs for edge deployment (Edge Generative AI).</li>
+                <li>Real-world applications of generative AI at the  wireless edge.</li>
+                <li>Benchmarking frameworks for evaluating generative AI models at the wireless edge.</li>
+                <li>Semantic communications for wireless federated learning.</li>
+                <li>Novel application layer and transport layer protocols at the wireless edge.</li>                <li>Effective mobility management and migration mechanisms in wireless federated learning.</li>
+                <li>Neural network optimization techniques in mobile scenarios.</li>
+                <li>Privacy and security challenges in wireless federated learning.</li>
+                <li>Communication-efficient techniques for asynchronous wireless federated learning training.</li>
+                <li>Real testbeds and empirical evaluations.</li>
+            </ul>
+            <section id="important-dates">
+                <h2>Important Dates</h2>
+                <ul>
+                    <li>
+                        Paper Submission Deadline: <strong ">5 March 2025.</strong> 
+                        <span id="countdown" style="color: #ff3358; font-weight: bold;"></span>
+                    </li>
+                    <li>Notification of Acceptance: <strong> 2 April 2025</strong></li>
+                    <li>Workshop Papers Camera-Ready: <strong> 16 April 2025 (this is a hard deadline)</strong> </li>
+                    <li>Workshop Date: <strong>  20 July 2025</strong></li>
+                    <p>*All deadlines are <a href="https://www.timeanddate.com/time/zones/aoe" target="_blank"> <strong>Anywhere on Earth (AoE)</strong> </a>.</p>
+                </ul>
+            </section>
+            
+            <script>
+                const deadline = new Date('March 5, 2025 23:59:59').getTime();
+            
+                const x = setInterval(function() {
+                    const now = new Date().getTime();
+                    const distance = deadline - now;
+            
+                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+                    document.getElementById('countdown').innerHTML = `You have: <span style="color:; font-weight: bold;">${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds left untill the deadline.</span>`;
+            
+                    if (distance < 0) {
+                        clearInterval(x);
+                        document.getElementById('countdown').innerHTML = "<span style='color: #ff3358; font-weight: bold;'>Closed for submission</span>";
+                    }
+                }, 1000);
+            </script>
+            
+            
+            
+        
+      
+        <section id="submission">
+            <h2>Submission Guidelines</h2>
+            <p> Authors are invited to submit original and unpublished work, which must not be submitted concurrently for publication elsewhere, in the following format:</p>
+            <ul>
+
+
+                <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission Formats</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        ul li::marker {
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        .bold-text {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li><span class="bold-text">Full paper (6 pages):</span> Interesting, novel results or completed work on topics within the scope of the workshop.</li>
+        <li><span class="bold-text">Short paper (4 pages):</span> Exciting preliminary work or novel ideas in their early stages.</li>
+        <li><span class="bold-text">Poster (2 pages):</span> Working, presentable systems or brief explanations of a research project.</li>
+        
+        <p>
+            The page length includes figures, tables, appendices, and references. Papers exceeding this 
+            page limit or with smaller fonts will be desk-rejected without review. All paper submissions should follow the 
+            IEEE 8.5″ x 11″ two-column format using 10pt fonts and the IEEE Conference template 
+            (<a href="https://template-selector.ieee.org/" target="_blank">download from here</a>). 
+        </p>
+       
+        <p>
+            For each accepted paper, at least one author is required to register and attend the workshop in-person to present their poster/paper on-site. No-show paper will be reported to the publisher and removed from the ICDCSW companion conference proceedings. All accepted and presented papers will be included in the IEEE ICDCSW companion conference proceedings and IEEE digital library.
+        </p>
+        <p>
+          Please refer to <a href="https://icdcs2025.icdcs.org/call-for-papers/#:~:text=Emergent%20Applications%20%26%20Infrastructures-,Paper%20Submission%E2%80%AF%C2%A0,-The%C2%A0Paper" target="_blank"> ICDCS's paper submission guidlines</a>.
+        </p>
+        <p>
+            <strong>Submission Portal:</strong> Submit papers via 
+            <a href="https://easychair.org/my/conference?conf=icdcsw2025">EasyChair</a>.
+
+        </p>
+
+        <p><strong>Note:</strong> All authors and contributors should adhere to ethics and professional standards of IEEE. Please refer to 
+            <a href="https://www.ieee.org/about/corporate/governance/p7-8.html" target="_blank">IEEE Code of Ethics</a> and 
+            <a href="https://journals.ieeeauthorcenter.ieee.org/become-an-ieee-journal-author/publishing-ethics/guidelines-and-policies/submission-and-peer-review-policies/#ai-generated-text" target="_blank">IEEE Policy of AI-Generated Text</a>.
+            </p>
+            
+
+
+
+               
+            </ul>
+        </section>
+        <section id="committee">
+            <h2>Organizing Committee</h2>
+            <h3>General Chairs</h3>
+            <div class="profile-card">
+                <img src="https://rehmatkhan.com/pic/rehmat.jpg" alt="Dr. Rehmat Ullah">
+                <div>
+                    <h3><a href="https://www.ncl.ac.uk/computing/staff/profile/rehmatullah.html " target="_blank">Dr. Rehmat Ullah</a></h3> 
+                    <p>Senior Lecturer (Associate Professor) at Newcastle University, UK</p>
+                </div>
+            </div>
+            <div class="profile-card">
+                <img src=" https://picom.ai/assets/img/our-team/dlp.png" alt="Dr. John Doe">
+                <div>
+                    <h3><a href="https://danhlephuoc.info/" target="_blank">Dr. Danh Le-Phuoc</a></h3>
+                    <p>Head of <a href="https://picom.ai/" target="_blank">PICOM Lab </a> and DFG Principle Investigator, Technische Universität Berlin, Germany.</p>
+                </div>
+            </div>
+
+            <div class="profile-card">
+                <img src="https://atifurrehman.com/pic/Atif-image.PNG" alt="Dr. John Doe">
+                <div>
+                    <h3><a href="https://www.mmu.ac.uk/staff/profile/dr-muhammad-atif-ur-rehman" target="_blank"> Dr. Muhammad Atif Ur Rehman</a>
+                    </h3>
+                    <p>Lecturer (Assistant Professor) at Manchester Metropolitan University, UK.</p>
+                </div>
+            </div>
+
+            <div class="profile-card">
+                <img src="https://www.qmul.ac.uk/eecs/media/eecs/staff-profile-images/ahmed.jpg" alt="Dr. John Doe">
+                <div>
+                    <h3><a href="https://www.qmul.ac.uk/eecs/people/profiles/sayedahmed.html" target="_blank"> Dr. Ahmed M. A. Sayed</a></h3>
+                    <p>Senior Lecturer (Associate Professor) and Head of <a href="https://sayed-sys-lab.github.io/" target="_blank">SAYED Systems Group</a> at Queen Mary University of London, UK.</p>
+                </div>
+            </div>
+        </section>
+        <h3>Publicity Chair</h3>
+        <div class="profile-card">
+            <img src="https://li.qilei.me/images/qilei.jpg" alt="Publicity Chair 1">
+            <div>
+                <h3><a href="https://li.qilei.me/" target="_blank"> Dr. Kevin Li </a></a> </h3>
+                <p>Post-doc researcher, Queen Mary University of London, UK.</p>
+            </div>
+        </div>
+       
+          
+            <section id="pcm">
+                <h2>Program Committee Members</h2>  (TBC)
+               
+                <ul>
+                    <li>Prof. Bahman Javadi, Western Sydney University, Australia.</li>
+                    <li>Dr. Di Wu, University of St Andrews, UK.</li>
+                    <li>Dr. Sidi Lu, William & Mary University, Williamsburg, Virginia, USA.</li>
+                    <li>Dr. Mahdi Boloursaz Mashhadi, University of Surrey, UK.</li>
+                    <li>Dr. Ali Raza, Honda Research Institute Europe, Germany.</li>
+                    <li>Dr. Boubakr Nour, Ericsson Research, Canada.</li>
+                    <li> Dr. Husnain Sherazi, Newcastle University, UK. </li>   
+                    <li>Dr. Muhammad Salahuddin, EURECOM, France.</li>
+                    <li> Dr. Tomasz Szydlo, Newcastle University, UK. </li>      
+                    <li> Dr. Dinh-Hieu Tran, University of Luxembourg, Luxembourg.</li>  
+                    <li> Dr. Dev Jha, Newcastle University, UK. </li>  
+                    <li>Dr. Muhammad Habib ur Rehman, University of Bedfordshire, UK.</li>
+                    <li>Dr. Saif ul Islam, University of Warwick, UK.</li>    
+                    <li> Dr. Kim Phuc Tran, University of Lille, France. </li> 
+                
+           
+           
+        </section>
+        <section id="keynote-speakers">
+            <h2>Keynote Speakers</h2>
+            <div class="profile-card">
+                <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfM-79-Uq2I4naak6QidXysTxkQolckApn-VYA2tDffPeenvT9h8Ml7ndyz-qrzoovU-LcSnfYKPUDIA3FvRWd3WMaoUCHFtXNbQFydilCBGMoAJmvhCjIFW7G8sCzDYTfVjT3rTQ?key=thbNXAIanuz1WS6N17BSncSK" alt="Speaker 1">
+                <div>
+                    <h3>
+                        <a href="https://www.ncl.ac.uk/computing/staff/profile/rajranjan.html" target="_blank">Prof Raj Ranjan</a>
+                    </h3>
+                    <p>Professor in Internet of Things and Director of 
+                        <a href="https://edgeaihub.co.uk/" target="_blank">National Edge AI Hub</a> at Newcastle University, UK.
+                    </p>
+                    <button onclick="toggleBio()" id="readMoreBtn">Read More</button>
+                    <div id="bioContent" style="display: none; max-height: 200px; overflow-y: scroll; margin-top: 10px; border: 1px solid #ccc; padding: 10px;">
+                        <p>Professor Rajiv Ranjan is an Australian-British computer scientist of Indian origin, known for his research in Distributed Systems, including Cloud Computing, Big Data, and the Internet of Things. He is University Chair Professor for Internet of Things research in the School of Computing of Newcastle University, United Kingdom. He has published approximately 350 scientific papers and is internationally recognized in the field of Distributed Systems.</p>
+                        <p>He is a Fellow of IEEE (2024), Academia Europaea (2022), and the Asia-Pacific Artificial Intelligence Association (2023). He is the Founding Director of the International Centre (UK-Australia) on EV Security and the National Edge Artificial Intelligence Hub, both funded by EPSRC. Over his career, he has secured more than $64 Million AUD (£32 Million+ GBP) in competitive research grants from public and private agencies.</p>
+                        <p>Prof. Ranjan is an innovator with significant academic and industrial contributions and is recognized as a global R&D leader. He serves on the editorial boards of leading international journals, including IEEE Transactions on Computers (2014-2016), IEEE Transactions on Cloud Computing, ACM Transactions on the Internet of Things, The Computer (Oxford University), The Computing (Springer), and Future Generation Computer Systems. He also led the Blue Skies section (2014-2019) of IEEE Cloud Computing, focusing on cutting-edge research at the intersection of IoT, Big Data Analytics, Cloud Computing, and Edge Computing.</p>
+                        <p>He is one of the most cited authors in computer science and software engineering worldwide, with an h-index of 80+ (Google Scholar), 60+ (Scopus), and 50+ (Web of Science). His work has been cited over 31,000 times on Google Scholar, 16,000+ times on Scopus, and 10,000+ times on Web of Science.</p>
+                    </div>
+                </div>
+                
+                <script>
+                    function toggleBio() {
+                        const bioContent = document.getElementById('bioContent');
+                        const btn = document.getElementById('readMoreBtn');
+                        if (bioContent.style.display === 'none' || bioContent.style.display === '') {
+                            bioContent.style.display = 'block';
+                            btn.textContent = 'Read Less';
+                        } else {
+                            bioContent.style.display = 'none';
+                            btn.textContent = 'Read More';
+                        }
+                    }
+                </script>
+                
+                
+            </div>
+            <div class="profile-card">
+                <img src="https://www.gla.ac.uk/media/Media_892557_smxx.jpg" alt="Speaker 2">
+                <div>
+                    <h3><a href="https://www.gla.ac.uk/schools/computing/staff/paulharvey/" target="_blank"> Dr. Paul Harvey</h3></a>
+                    <p>Lecturer (Assistant Professor) in Autonomous Systems at School of Computing Science at University of Glasgow, UK.</p>
+                </div>
+            </div>
+       
+        <section id="contact">
+            <h2>Contact:</h2>
+            <p><strong>Dr. Rehmat Ullah</strong> </p>
+                <p> <strong>Email: </strong><a href="mailto:rehmat.ullah@newcastle.ac.uk"> rehmat.ullah@newcastle.ac.uk</a></p>
+                <p> <a href="https://edgeaihub.co.uk/" target="_blank"><strong>National Edge AI Hub</strong></p>
+                    <p> </a><a href="https://www.ncl.ac.uk/computing/" target="_blank"><strong>School of Computing at Newcastle University, UK</strong> </a></p>
+
+           
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2025 <a href="https://rehmatkhan.github.io/FedEdgeAI/" style="color: white;">FedEdgeAI</a>. All rights reserved. | Designed & Managed by <a href="https://www.rehmatkhan.com/"target="_blank" style="color: white;"><strong>Rehmat Ullah</strong> </a></p>
+
+    </footer>
+</body>
+</html>
