@@ -429,6 +429,20 @@
                     </h3>
                     <p>Professor of Cybersecurity in School of Computing at Newcastle University, UK.
                     </p>
+
+                    <script>
+                    function toggleBio() {
+                        const bioContent = document.getElementById('bioContent');
+                        const btn = document.getElementById('readMoreBtn');
+                        if (bioContent.style.display === 'none' || bioContent.style.display === '') {
+                            bioContent.style.display = 'block';
+                            btn.textContent = 'Read Less';
+                        } else {
+                            bioContent.style.display = 'none';
+                            btn.textContent = 'Read More';
+                        }
+                    }
+                </script>
                       
            </div>
             <div class="profile-card">
