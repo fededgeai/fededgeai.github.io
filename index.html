@@ -16,7 +16,6 @@
             overflow-x: hidden;
         }
 
-    
         header {
             background: linear-gradient(135deg, hsl(269, 85%, 43%), #2575FC);
             color: #fff;
@@ -27,7 +26,7 @@
         }
         header h1 {
             margin: 0;
-            font-size: 3.0 em;
+            font-size: 2.0em;
             font-weight: 700;
             animation: slideInDown 1.5s ease-in-out;
         }
@@ -43,7 +42,6 @@
             animation: zoomIn 2s ease-in-out;
         }
 
-       
         nav {
             background: #333;
             position: sticky;
@@ -67,7 +65,6 @@
             transform: scale(1.1);
         }
 
-    
         .container {
             max-width: 1200px;
             margin: 40px auto;
@@ -94,7 +91,6 @@
             margin-left: 20px;
         }
 
-    
         @keyframes slideInDown {
             0% {
                 transform: translateY(-100px);
@@ -134,7 +130,6 @@
             }
         }
 
-    
         .profile-card {
             display: flex;
             align-items: center;
@@ -168,7 +163,6 @@
             color: #555;
         }
 
-    
         footer {
             background: #333;
             color: #fff;
@@ -183,6 +177,81 @@
         footer a:hover {
             text-decoration: underline;
         }
+
+        /* Program Schedule Styles */
+        .program-schedule {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .program-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .program-header h3 {
+            color: #2575FC;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        
+        .time-slot {
+            padding: 15px;
+            border-left: 4px solid #6A11CB;
+            margin-bottom: 15px;
+            background: #fff;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .session-header {
+            background: #eef2f9;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #2575FC;
+        }
+        
+        .time {
+            display: block;
+            font-weight: bold;
+            color: #2575FC;
+            margin-bottom: 5px;
+        }
+        
+        .title {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .speaker, .authors {
+            display: block;
+            font-style: italic;
+            color: #555;
+            font-size: 0.95em;
+        }
+        
+        .presentation {
+            padding: 10px;
+            margin: 10px 0;
+            background: #fff;
+            border-left: 3px solid #2575FC;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .break {
+            background: #e6f7ff;
+            text-align: center;
+            font-weight: bold;
+            color: #0086b3;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
     </style>
 </head>
 <body>
@@ -192,20 +261,19 @@
         <p> In conjunction with the <a href="https://icdcs2025.icdcs.org/" style="color:whitesmoke;" target="_blank">45th IEEE International Conference on Distributed Computing Systems (IEEE ICDCS 2025)</a> </p>
         <br>
         <p>20 July - 23 July, 2025, Glasgow, Scotland, UK</p>
-
-
     </header>
+    
     <nav>
         <a href="#about">About</a>
         <a href="#topics">Call for papers</a>
         <a href="#important-dates">Important Dates</a>
         <a href="#submission">Submission Guidelines</a>
-
         <a href="#committee">Committee</a>
         <a href="#keynote-speakers">Keynote Speakers</a>
-
+        <a href="#program">Program</a>
         <a href="#contact">Contact</a>
     </nav>
+    
     <div class="container">
         <section id="about">
             <h2>About the Workshop</h2>
@@ -215,13 +283,13 @@
                 <p>We invite you to submit your original work on topics related to federated learning, focusing on real-world challenges when federated learning is deployed in practical scenarios. This includes algorithms for distributed machine learning, adaptive techniques for changing network conditions, edge AI resilience, benchmarking generative models at the edge, downsizing Large Language Models (LLMs) into Small Language Models (SLMs)
                     for improved computation and communication efficiency, semantic communication, asynchronous federated learning training, and rethinking communication protocols for wireless federated learning.</p>
             </section>
+            
         <section id="topics">
             <h2>Call for Papers</h2>
-           
             <p>
                 Edge AI emerged as an evolution of the edge computing paradigm, deploying AI algorithms and models directly on edge devices. Within this context, the concept of federated learning provides privacy by design in an machine learning technique, enabling collaborative learning across multiple distributed devices without sending raw data to a central server while processing data locally on devices. However, given the limited availability of resources on many devices, performing federated learning on such devices is impractical due to increased training times. Moreover, for training machine learning models that may be a Deep Neural Network (DNN), massive amounts of parameter updates need to be synchronized across distributed devices, creating potential congestion and eventually slowdowns the entire training process. </p>
                 
-                <p>    Specifically, the end devices used in federated learning are predominantly wireless and typically operate with limited bandwidth, such as 2G, 3G, or Wi-Fi. The global and local model parameters use uplink and downlink transmission, which depend on bandwidth resource block allocation, fading, and interference from others. Exchanging model parameters over such lossy networks may result in challenges such as transmission delay, which impacts the convergence time of the model, and packet losses, which affect the model’s accuracy.</p>
+                <p>    Specifically, the end devices used in federated learning are predominantly wireless and typically operate with limited bandwidth, such as 2G, 3G, or Wi-Fi. The global and local model parameters use uplink and downlink transmission, which depend on bandwidth resource block allocation, fading, and interference from others. Exchanging model parameters over such lossy networks may result in challenges such as transmission delay, which impacts the convergence time of the model, and packet losses, which affect the model's accuracy.</p>
             <p>
                 We invite submissions on a wide range of topics including, but not limited to:
             </p>
@@ -238,6 +306,7 @@
                 <li>Communication-efficient techniques for asynchronous wireless federated learning training.</li>
                 <li>Real testbeds and empirical evaluations.</li>
             </ul>
+            
             <section id="important-dates">
                 <h2>Important Dates</h2>
                 <ul>
@@ -272,86 +341,41 @@
                     }
                 }, 1000);
             </script>
-            
-            
-            
-        
+        </section>
       
         <section id="submission">
             <h2>Submission Guidelines</h2>
             <p> Authors are invited to submit original and unpublished work, which must not be submitted concurrently for publication elsewhere, in the following format:</p>
             <ul>
-
-
-                <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Submission Formats</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-        }
-
-        ul {
-            list-style-type: disc;
-            margin: 0;
-            padding-left: 20px;
-        }
-
-        ul li {
-            margin-bottom: 10px;
-        }
-
-        ul li::marker {
-            color: #007BFF;
-            font-weight: bold;
-        }
-
-        .bold-text {
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-
-    <ul>
-        <li><span class="bold-text">Full paper (6 pages):</span> Interesting, novel results or completed work on topics within the scope of the workshop.</li>
-        <li><span class="bold-text">Short paper (4 pages):</span> Exciting preliminary work or novel ideas in their early stages.</li>
-        <li><span class="bold-text">Poster (2 pages):</span> Working, presentable systems or brief explanations of a research project.</li>
-        
-        <p>
-            The page length includes figures, tables, appendices, and references. Papers exceeding this 
-            page limit or with smaller fonts will be desk-rejected without review. All paper submissions should follow the 
-            IEEE 8.5″ x 11″ two-column format using 10pt fonts and the IEEE Conference template 
-            (<a href="https://template-selector.ieee.org/" target="_blank">download from here</a>). 
-        </p>
-       
-        <p>
-            For each accepted paper, at least one author is required to register and attend the workshop in-person to present their poster/paper on-site. No-show paper will be reported to the publisher and removed from the ICDCSW companion conference proceedings. All accepted and presented papers will be included in the IEEE ICDCSW companion conference proceedings and IEEE digital library.
-        </p>
-        <p>
-          Please refer to <a href="https://icdcs2025.icdcs.org/call-for-papers/#:~:text=Emergent%20Applications%20%26%20Infrastructures-,Paper%20Submission%E2%80%AF%C2%A0,-The%C2%A0Paper" target="_blank"> ICDCS's paper submission guidlines</a>.
-        </p>
-        <p>
-            <strong>Submission Portal:</strong> Submit papers via 
-            <a href="https://easychair.org/my/conference?conf=icdcsw2025">EasyChair</a>.
-
-        </p>
-
-        <p><strong>Note:</strong> All authors and contributors should adhere to ethics and professional standards of IEEE. Please refer to 
-            <a href="https://www.ieee.org/about/corporate/governance/p7-8.html" target="_blank">IEEE Code of Ethics</a> and 
-            <a href="https://journals.ieeeauthorcenter.ieee.org/become-an-ieee-journal-author/publishing-ethics/guidelines-and-policies/submission-and-peer-review-policies/#ai-generated-text" target="_blank">IEEE Policy of AI-Generated Text</a>.
-            </p>
-            
-
-
-
+                <li><span class="bold-text">Full paper (6 pages):</span> Interesting, novel results or completed work on topics within the scope of the workshop.</li>
+                <li><span class="bold-text">Short paper (4 pages):</span> Exciting preliminary work or novel ideas in their early stages.</li>
+                <li><span class="bold-text">Poster (2 pages):</span> Working, presentable systems or brief explanations of a research project.</li>
+                
+                <p>
+                    The page length includes figures, tables, appendices, and references. Papers exceeding this 
+                    page limit or with smaller fonts will be desk-rejected without review. All paper submissions should follow the 
+                    IEEE 8.5″ x 11″ two-column format using 10pt fonts and the IEEE Conference template 
+                    (<a href="https://template-selector.ieee.org/" target="_blank">download from here</a>). 
+                </p>
                
+                <p>
+                    For each accepted paper, at least one author is required to register and attend the workshop in-person to present their poster/paper on-site. No-show paper will be reported to the publisher and removed from the ICDCSW companion conference proceedings. All accepted and presented papers will be included in the IEEE ICDCSW companion conference proceedings and IEEE digital library.
+                </p>
+                <p>
+                  Please refer to <a href="https://icdcs2025.icdcs.org/call-for-papers/#:~:text=Emergent%20Applications%20%26%20Infrastructures-,Paper%20Submission%E2%80%AF%C2%A0,-The%C2%A0Paper" target="_blank"> ICDCS's paper submission guidlines</a>.
+                </p>
+                <p>
+                    <strong>Submission Portal:</strong> Submit papers via 
+                    <a href="https://easychair.org/my/conference?conf=icdcsw2025">EasyChair</a>.
+                </p>
+
+                <p><strong>Note:</strong> All authors and contributors should adhere to ethics and professional standards of IEEE. Please refer to 
+                    <a href="https://www.ieee.org/about/corporate/governance/p7-8.html" target="_blank">IEEE Code of Ethics</a> and 
+                    <a href="https://journals.ieeeauthorcenter.ieee.org/become-an-ieee-journal-author/publishing-ethics/guidelines-and-policies/submission-and-peer-review-policies/#ai-generated-text" target="_blank">IEEE Policy of AI-Generated Text</a>.
+                </p>
             </ul>
         </section>
+        
         <section id="committee">
             <h2>Organizing Committee</h2>
             <h3>General Chairs</h3>
@@ -386,92 +410,131 @@
                     <p>Senior Lecturer (Associate Professor) and Head of <a href="https://sayed-sys-lab.github.io/" target="_blank">SAYED Systems Group</a> at Queen Mary University of London, UK.</p>
                 </div>
             </div>
-        </section>
-        <h3>Publicity Chair</h3>
-        <div class="profile-card">
-            <img src="https://li.qilei.me/images/qilei.jpg" alt="Publicity Chair 1">
-            <div>
-                <h3><a href="https://li.qilei.me/" target="_blank"> Dr. Kevin Li </a></a> </h3>
-                <p>Post-doc researcher, Queen Mary University of London, UK.</p>
+            
+            <h3>Publicity Chair</h3>
+            <div class="profile-card">
+                <img src="https://sayed-sys-lab.github.io/images/team/kevin.png" alt="Dr. Kevin Li">
+                <div>
+                    <h3><a href="https://li.qilei.me/" target="_blank"> Dr. Kevin Li </a></a> </h3>
+                    <p>Post-doc researcher, Queen Mary University of London, UK.</p>
+                </div>
             </div>
-        </div>
-       
-          
-            <section id="pcm">
-                <h2>Program Committee Members</h2> 
-               
-                <ul>
-                    <li>Prof. Bahman Javadi, Western Sydney University, Australia.</li>
-                    <li>Dr. Di Wu, University of St Andrews, UK.</li>
-                    <li>Dr. Sidi Lu, William & Mary University, Williamsburg, Virginia, USA.</li>
-                    <li>Dr. Mahdi Boloursaz Mashhadi, University of Surrey, UK.</li>
-                    <li>Dr. Ali Raza, Honda Research Institute Europe, Germany.</li>
-                    <li>Dr. Boubakr Nour, Ericsson Research, Canada.</li>
-                    <li> Dr. Husnain Sherazi, Newcastle University, UK. </li>   
-                    <li>Dr. Muhammad Salahuddin, EURECOM, France.</li>
-                    <li> Dr. Tomasz Szydlo, Newcastle University, UK. </li>      
-                    <li> Dr. Dinh-Hieu Tran, University of Luxembourg, Luxembourg.</li>  
-                    <li> Dr. Dev Jha, Newcastle University, UK. </li>  
-                    <li>Dr. Muhammad Habib ur Rehman, University of Bedfordshire, UK.</li>
-                    <li>Dr. Saif ul Islam, University of Warwick, UK.</li>    
-                    <li> Dr. Kim Phuc Tran, University of Lille, France. </li> 
-                
-           
-           
         </section>
-     <section id="keynote-speakers">
-    <h2>Keynote Speakers</h2>
+        
+        <section id="pcm">
+            <h2>Program Committee Members</h2> 
+            <ul>
+                <li>Prof. Bahman Javadi, Western Sydney University, Australia.</li>
+                <li>Dr. Di Wu, University of St Andrews, UK.</li>
+                <li>Dr. Sidi Lu, William & Mary University, Williamsburg, Virginia, USA.</li>
+                <li>Dr. Mahdi Boloursaz Mashhadi, University of Surrey, UK.</li>
+                <li>Dr. Ali Raza, Honda Research Institute Europe, Germany.</li>
+                <li>Dr. Boubakr Nour, Ericsson Research, Canada.</li>
+                <li> Dr. Husnain Sherazi, Newcastle University, UK. </li>   
+                <li>Dr. Muhammad Salahuddin, EURECOM, France.</li>
+                <li> Dr. Tomasz Szydlo, Newcastle University, UK. </li>      
+                <li> Dr. Dinh-Hieu Tran, University of Luxembourg, Luxembourg.</li>  
+                <li> Dr. Dev Jha, Newcastle University, UK. </li>  
+                <li>Dr. Muhammad Habib ur Rehman, University of Bedfordshire, UK.</li>
+                <li>Dr. Saif ul Islam, University of Warwick, UK.</li>    
+                <li> Dr. Kim Phuc Tran, University of Lille, France. </li> 
+            </ul>
+        </section>
+     
+        <section id="keynote-speakers">
+            <h2>Keynote Speakers</h2>
+            <div class="profile-card">
+                <img src="https://www.dcs.gla.ac.uk/~josecr/img/jose.png" alt="Dr. José Cano Reyes">
+                <div>
+                    <h3><a href="https://www.dcs.gla.ac.uk/~josecr/" target="_blank">Dr. José Cano Reyes</a></h3>
+                    <p>Senior Lecturer (Associate Professor) in School of Computing Science at University of Glasgow, UK.</p>
+                    <p><strong>Talk Title:</strong> Deploying LLMs on Resource-constrained Edge Devices</p>
+                </div>
+            </div>
 
-    <div class="profile-card">
-        <img src="https://www.dcs.gla.ac.uk/~josecr/img/jose.png" alt="Dr. José Cano Reyes">
-        <div>
-            <h3><a href="https://www.dcs.gla.ac.uk/~josecr/" target="_blank">Dr. José Cano Reyes</a></h3>
-                        <p>Senior Lecturer (Associate Professor) in School of Computing Science at University of Glasgow, UK.</p>
+            <div class="profile-card">
+                <img src="https://media.licdn.com/dms/image/v2/C5603AQFhO-lN7Gwg2g/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1517819009510?e=2147483647&v=beta&t=Op1SrN3G93ePx9Iwp8CzQhr301OBE85wtzcUOfMdOIA" alt="Dr. Edoardo Prezioso">
+                <div>
+                    <h3><a href="https://it.linkedin.com/in/edoardo-prezioso-43b423111/en" target="_blank">Dr. Edoardo Prezioso</a></h3>
+                    <p>Research Fellow at University of Naples Federico II, Italy.</p>
+                    <p><strong>Talk Title:</strong> Federated Learning under Operational Constraints: A Study on Statistical and Device Heterogeneity</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Workshop Program Section -->
+        <section id="program">
+            <h2>Program</h2>
+            <div class="program-schedule">
+                <div class="program-header">
+                    <h3>20 July 2025</h3>
+                    <p>Vanue: Radisson Blu Hotel, Glasgow, Scotland, UK</p>
+                </div>
+                
+                <div class="time-slot">
+                    <span class="time">13:45 – 13:55</span>
+                    <span class="title">Introduction (Workshop and Organizers Introduction)</span>
+                </div>
+                
+                <div class="time-slot">
+                    <span class="time">13:55 – 14:40</span>
+                    <span class="title">Keynote 1: Deploying LLMs on Resource-constrained Edge Devices</span>
+                    <span class="speaker">Dr. José Cano Reyes, Senior Lecturer (Associate Professor) in School of Computing Science at University of Glasgow, UK.
 
-            <p><strong>Talk Title:</strong> Deploying LLMs on Resource-constrained Edge Devices</p>
-        </div>
-    </div>
-
-    <div class="profile-card">
-        <img src="https://media.licdn.com/dms/image/v2/C5603AQFhO-lN7Gwg2g/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1517819009510?e=2147483647&v=beta&t=Op1SrN3G93ePx9Iwp8CzQhr301OBE85wtzcUOfMdOIA" alt="Dr. Edoardo Prezioso">
-        <div>
-            <h3><a href="https://it.linkedin.com/in/edoardo-prezioso-43b423111/en" target="_blank">Dr. Edoardo Prezioso</a></h3>
-            <p>Research Fellow at University of Naples Federico II, Italy.</p>
-             <p><strong>Talk Title:</strong> Federated Learning under Operational Constraints: A Study on Statistical and Device Heterogeneity</p>
-        </div>
-    </div>
-</section>
-
-<script>
-    function toggleBio() {
-        const bioContent = document.getElementById('bioContent');
-        const btn = document.getElementById('readMoreBtn');
-        if (bioContent.style.display === 'none' || bioContent.style.display === '') {
-            bioContent.style.display = 'block';
-            btn.textContent = 'Read Less';
-        } else {
-            bioContent.style.display = 'none';
-            btn.textContent = 'Read More';
-        }
-    }
-</script>
-
-
-
-        <section id="contact">
-            <h2>Contact:</h2>
-            <p><strong>FedEdgeAI Chairs</strong> </p>
-                <p> <strong>Email: </strong><a href="mailto:fededgeai@gmail.com"> fededgeai@gmail.com </a></p>
-                <p> <a href="https://edgeaihub.co.uk/" target="_blank"><strong>National Edge AI Hub</strong></p>
-                    <p> </a><a href="https://www.ncl.ac.uk/computing/" target="_blank"><strong>School of Computing at Newcastle University, UK</strong> </a></p>
-
+                    </span>
+                </div>
+                
+                <div class="session-header"> Session 1: Federated IoT Environments (14:40 - 14:55)</div>
+                <div class="presentation">
+                   
+                    <span class="title">FedHDC-IDS: A Hyperdimensional Computing Based Network Intrusion Detection System for IoT Networks</span>
+                    <span class="authors">Authors: Othmane Belarbi, Yogha Restu Pramadi, Omer Rana, Yuhua Li, Aftab Khan, Theodoros Spyridopoulos</span>
+                </div>
+                <div class="presentation">
+                    <span class="title">A Multi-Criteria Selection of IoT Devices For Federated Learning with Non-IID Data</span>
+                    <span class="authors">Authors: Hajar El Hammouti, Mustafa Kishk, Ahmed Elzenaty</span>
+                </div>
            
+                
+                <div class="break">
+                    <span class="time">15:15 – 15:45</span>
+                    <span class="title">Coffee Break</span>
+                </div>
+                
+                <div class="time-slot">
+                    <span class="time">15:45 – 16:15</span>
+                    <span class="title">Keynote 2: Federated Learning under Operational Constraints: A Study on Statistical and Device Heterogeneity</span>
+                    <span class="speaker">Dr. Edoardo Prezioso, Research Fellow at University of Naples Federico II, Italy.</span>
+                </div>
+                
+                <div class="session-header">Session 2: Federated Optimisation (16:15 - 16:45)</div>
+                <div class="presentation">
+                    
+                    <span class="title">Decentralized Intelligence: A Digital Twin-Assisted Hierarchical Federated Deep Reinforcement Learning Framework for Resource Optimization</span>
+                    <span class="authors">Authors: Ahmad Arsalan, Wai Fong Tam, Tariq Umer, Rana Asif Rehman, Ahmed M. Abdelmoniem</span>
+                </div>
+                <div class="presentation">
+                
+                    <span class="title">Benchmarking Mutual Information-based Loss Functions in Federated Learning</span>
+                    <span class="authors">Authors: Sarang S, Harsh D Chothani, Qilei Li, Ahmed M. Abdelmoniem, Arnab Paul</span>
+                </div>
+                
+                <div class="session-header">Panel and Closing Remarks (16:45 - 17:15)</div>
+                 
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2>Contact</h2>
+            <p><strong>FedEdgeAI Chairs</strong> </p>
+            <p><strong>Email: </strong><a href="mailto:fededgeai@gmail.com"> fededgeai@gmail.com </a></p>
+            <p><a href="https://edgeaihub.co.uk/" target="_blank"><strong>National Edge AI Hub</strong></a></p>
+            <p><a href="https://www.ncl.ac.uk/computing/" target="_blank"><strong>School of Computing at Newcastle University, UK</strong> </a></p>
         </section>
     </div>
 
     <footer>
         <p>&copy; 2025 <a href="https://rehmatkhan.github.io/FedEdgeAI/" style="color: white;">FedEdgeAI</a>. All rights reserved. | Designed & Managed by <a href="https://www.rehmatkhan.com/"target="_blank" style="color: white;"><strong>Rehmat Ullah</strong> </a></p>
-
     </footer>
 </body>
 </html>
